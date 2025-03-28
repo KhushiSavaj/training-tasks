@@ -9,9 +9,9 @@ export const tasks: ITasks[] = [
   },
   {
     id: 2,
-    title: "Calculator App",
+    title: "Greeting Component",
     description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
+      "Create a Greeting Component that takes a name as a prop and displays a personalized message.",
   },
   {
     id: 3,
