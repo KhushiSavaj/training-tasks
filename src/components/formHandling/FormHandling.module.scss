@@ -26,7 +26,7 @@ input[type="number"] {
   margin: 30px 50px 0 50px;
   padding: 30px;
   border-radius: 8px;
-  border: 1px solid $gray_100;
+  border: 1px solid $grey_100;
   .taskDetails {
     margin-bottom: 40px;
     .taskName {
@@ -34,7 +34,7 @@ input[type="number"] {
       font-weight: 700;
     }
     .taskDescription {
-      color: $gray;
+      color: $grey;
     }
   }
   .formSection {
@@ -55,7 +55,7 @@ input[type="number"] {
         outline: none;
         font-weight: 600;
         margin: 7px 0px;
-        border: 1px solid $gray_100;
+        border: 1px solid $grey_100;
         &.inValidInput {
           border: 1px solid $error;
         }
@@ -65,7 +65,7 @@ input[type="number"] {
         display: flex;
         border-radius: 8px;
         margin: 7px 0px;
-        border: 1px solid $gray_100;
+        border: 1px solid $grey_100;
         &.inValidInput {
           border: 1px solid $error;
         }

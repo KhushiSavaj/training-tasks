@@ -17,7 +17,7 @@
     flex: 1 1 250px;
     padding: 16px;
     border-radius: 5px;
-    border: 1px solid $gray_100;
+    border: 1px solid $grey_100;
     overflow: hidden;
     color: $black;
     text-decoration: none;
@@ -34,7 +34,7 @@
       gap: 10px;
     }
     .cardDescription {
-      color: $gray;
+      color: $grey;
       font-size: 12px;
       font-weight: 500;
       text-overflow: ellipsis;

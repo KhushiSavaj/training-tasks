@@ -98,7 +98,7 @@ const FormHandling = () => {
                 onBlur={formik.handleBlur}
                 placeholder="Enter your age"
                 className={`${styles.inputField} ${
-                  formik.touched.name && formik.errors.name
+                  formik.touched.age && formik.errors.age
                     ? styles.inValidInput
                     : ""
                 }`}
@@ -118,7 +118,7 @@ const FormHandling = () => {
               onBlur={formik.handleBlur}
               placeholder="Enter your email"
               className={`${styles.inputField} ${
-                formik.touched.name && formik.errors.name
+                formik.touched.email && formik.errors.email
                   ? styles.inValidInput
                   : ""
               }`}
@@ -131,7 +131,7 @@ const FormHandling = () => {
             <label className={styles.label}>{`Password`}</label>
             <div
               className={`${styles.passwordInput} ${
-                formik.touched.name && formik.errors.name
+                formik.touched.password && formik.errors.password
                   ? styles.inValidInput
                   : ""
               }`}
