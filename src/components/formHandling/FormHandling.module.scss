@@ -1,0 +1,118 @@
+@import "../../styles/color.scss";
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.backToTask {
+  font-weight: 700;
+  cursor: pointer;
+  margin: 20px;
+  display: flex;
+  gap: 5px;
+  > svg {
+    height: 20px;
+    width: 20px;
+    fill: $black;
+  }
+}
+
+.container {
+  margin: 30px 50px 0 50px;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid $gray_100;
+  .taskDetails {
+    margin-bottom: 40px;
+    .taskName {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .taskDescription {
+      color: $gray;
+    }
+  }
+  .formSection {
+    .fieldsGrid {
+      display: flex;
+      gap: 20px;
+    }
+    .field {
+      width: 100%;
+      margin-bottom: 20px;
+      .label {
+        font-weight: 700;
+      }
+      .inputField {
+        width: 100%;
+        padding: 10px;
+        border-radius: 8px;
+        outline: none;
+        font-weight: 600;
+        margin: 7px 0px;
+        border: 1px solid $gray_100;
+        &.inValidInput {
+          border: 1px solid $error;
+        }
+      }
+      .passwordInput {
+        width: 100%;
+        display: flex;
+        border-radius: 8px;
+        margin: 7px 0px;
+        border: 1px solid $gray_100;
+        &.inValidInput {
+          border: 1px solid $error;
+        }
+        .inputFieldPassword {
+          width: 100%;
+          padding: 0 10px;
+          outline: none;
+          border: transparent;
+          border-radius: 8px;
+        }
+        .passwordIcon {
+          margin: 10px;
+          height: 20px;
+          width: 20px;
+          cursor: pointer;
+        }
+      }
+      .error {
+        color: $error;
+        font-size: 13px;
+      }
+    }
+  }
+  .submit {
+    width: 100%;
+    background-color: $black;
+    color: $white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e0f7fa;
+    border-radius: 8px;
+    .resultHeading {
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .resultFieldName {
+      margin: 5px 0;
+    }
+  }
+}

@@ -15,9 +15,9 @@ export const tasks: ITasks[] = [
   },
   {
     id: 3,
-    title: "Counter App",
+    title: "Form Handling",
     description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
+      "Create a form with validation that stores and displays data on submission.",
   },
   {
     id: 4,
