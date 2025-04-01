@@ -67,15 +67,10 @@
         border: none;
         border-radius: 4px;
         cursor: pointer;
-      }
-      .updateDisabledButton {
-        padding: 8px 20px;
-        color: $white;
-        background-color: $black;
-        border: none;
-        border-radius: 4px;
-        opacity: 0.5;
-        cursor: not-allowed;
+        &.updateDisabledButton {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
       }
     }
   }

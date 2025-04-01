@@ -54,6 +54,10 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      &.updateDisabledButton {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
     }
     .error {
       color: $error;
@@ -65,6 +69,10 @@
     .taskId {
       font-weight: 600;
     }
+    .noTask {
+      text-align: center;
+      color: $grey;
+    }
     .todosList {
       width: 100%;
       border-radius: 4px;
@@ -73,6 +81,9 @@
       background-color: $grey_100;
       display: flex;
       margin: 10px 0;
+      &.lightBorder {
+        border: 1px solid $black;
+      }
       .listName {
         width: 100%;
       }

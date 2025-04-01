@@ -67,7 +67,13 @@ const TodoList = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <button onClick={handleSubmit} className={styles.addButton}>
+            <button
+              onClick={handleSubmit}
+              disabled={!inputValue}
+              className={`${styles.addButton}  ${
+                !inputValue ? styles.updateDisabledButton : ""
+              }`}
+            >
               {selectedTask !== null ? `EDIT` : `ADD`}
             </button>
           </div>
@@ -75,17 +81,25 @@ const TodoList = () => {
 
         <div className={styles.taskList}>
           <div className={styles.taskId}>{`Tasks (${tasks?.length})`}</div>
-          {tasks.map((res, index) => {
-            return (
-              <div className={styles.todosList}>
-                <div className={styles.listName}>{res.name}</div>
-                <div className={styles.gridButton}>
-                  <EditOutlinedIcon onClick={() => handleUpdate(res)} />
-                  <DeleteOutlinedIcon onClick={() => handleDelete(index)} />
+          {tasks.length === 0 ? (
+            <div className={styles.noTask}>No tasks yet. Add one above</div>
+          ) : (
+            tasks.map((res, index) => {
+              return (
+                <div
+                  className={`${styles.todosList}  ${
+                    selectedTask?.id === res?.id ? styles.lightBorder : ""
+                  }`}
+                >
+                  <div className={styles.listName}>{res.name}</div>
+                  <div className={styles.gridButton}>
+                    <EditOutlinedIcon onClick={() => handleUpdate(res)} />
+                    <DeleteOutlinedIcon onClick={() => handleDelete(index)} />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
       </div>
     </div>

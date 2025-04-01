@@ -55,9 +55,9 @@ const Greeting = () => {
             <button
               onClick={onUpdate}
               disabled={!inputValue}
-              className={
-                !inputValue ? styles.updateDisabledButton : styles.updateButton
-              }
+              className={`${styles.updateButton}  ${
+                !inputValue ? styles.updateDisabledButton : ""
+              }`}
             >
               Update
             </button>
