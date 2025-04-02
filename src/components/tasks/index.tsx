@@ -10,7 +10,7 @@ export interface ITasks {
 
 const Tasks = () => {
   return (
-    <>
+    <div>
       <div className={styles.tasksHeading}>React Training Tasks</div>
       <div className={styles.homeContent}>
         {tasks.map((res) => {
@@ -27,7 +27,7 @@ const Tasks = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

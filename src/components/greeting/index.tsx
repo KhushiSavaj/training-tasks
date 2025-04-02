@@ -1,6 +1,4 @@
-import { useNavigate } from "react-router-dom";
 import styles from "./Greeting.module.scss";
-import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import { useState } from "react";
 
 interface IGreetComponentProps {
@@ -19,7 +17,6 @@ const GreetingResult = ({ name = "Guest!" }: IGreetComponentProps) => {
 const Greeting = () => {
   const [name, setName] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState("");
-  const navigate = useNavigate();
 
   const onUpdate = () => {
     setName(inputValue);
@@ -27,41 +24,35 @@ const Greeting = () => {
   };
 
   return (
-    <div>
-      <div onClick={() => navigate("/")} className={styles.backToTask}>
-        <ArrowBackOutlinedIcon />
-        <div>Back To Task</div>
-      </div>
-      <div className={styles.greetingContent}>
-        <div className={styles.greetingHead}>
-          <div className={styles.heading}>Task 2. Greeting Component</div>
-          <div className={styles.description}>
-            Create a Greeting Component that takes a name as a prop and displays
-            a personalized message.
-          </div>
+    <div className={styles.greetingContent}>
+      <div className={styles.greetingHead}>
+        <div className={styles.heading}>Task 2. Greeting Component</div>
+        <div className={styles.description}>
+          Create a Greeting Component that takes a name as a prop and displays a
+          personalized message.
         </div>
-        <GreetingResult name={name || undefined} />
-        <div className={styles.updateSection}>
-          <label className={styles.nameLabel}>Enter a name :</label>
-          <div className={styles.inputSection}>
-            <input
-              className={styles.input}
-              type="text"
-              onChange={(e: any) => setInputValue(e.target.value)}
-              name="name"
-              value={inputValue}
-              placeholder="Enter your name"
-            ></input>
-            <button
-              onClick={onUpdate}
-              disabled={!inputValue}
-              className={`${styles.updateButton}  ${
-                !inputValue ? styles.updateDisabledButton : ""
-              }`}
-            >
-              Update
-            </button>
-          </div>
+      </div>
+      <GreetingResult name={name || undefined} />
+      <div className={styles.updateSection}>
+        <label className={styles.nameLabel}>Enter a name :</label>
+        <div className={styles.inputSection}>
+          <input
+            className={styles.input}
+            type="text"
+            onChange={(e: any) => setInputValue(e.target.value)}
+            name="name"
+            value={inputValue}
+            placeholder="Enter your name"
+          ></input>
+          <button
+            onClick={onUpdate}
+            disabled={!inputValue}
+            className={`${styles.updateButton}  ${
+              !inputValue ? styles.updateDisabledButton : ""
+            }`}
+          >
+            Update
+          </button>
         </div>
       </div>
     </div>

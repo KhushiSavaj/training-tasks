@@ -25,40 +25,4 @@ export const tasks: ITasks[] = [
     description:
       "Build a simple todo list where users can add and remove tasks using state and list rendering.",
   },
-  {
-    id: 5,
-    title: "Counter App",
-    description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
-  },
-  {
-    id: 6,
-    title: "Calculator App",
-    description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
-  },
-  {
-    id: 7,
-    title: "Counter App",
-    description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
-  },
-  {
-    id: 8,
-    title: "Calculator App",
-    description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
-  },
-  {
-    id: 9,
-    title: "Counter App",
-    description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
-  },
-  {
-    id: 10,
-    title: "Calculator App",
-    description:
-      "Count the value using a class component with Increment and Decrement,state methods, and updates the value using the setState method.",
-  },
 ];
