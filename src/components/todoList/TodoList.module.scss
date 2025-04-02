@@ -19,7 +19,6 @@
   border-radius: 8px;
   border: 1px solid $grey_100;
   .taskDetails {
-    margin-bottom: 40px;
     .taskName {
       font-size: 20px;
       font-weight: 700;
@@ -30,6 +29,7 @@
   }
   .taskSection {
     width: 100%;
+    margin: 40px 0;
     .label {
       font-weight: 600;
     }
@@ -59,13 +59,8 @@
         cursor: not-allowed;
       }
     }
-    .error {
-      color: $error;
-      font-size: 13px;
-    }
   }
   .taskList {
-    margin-top: 30px;
     .taskId {
       font-weight: 600;
     }
@@ -80,12 +75,20 @@
       padding: 15px;
       background-color: $grey_100;
       display: flex;
+      gap: 5px;
       margin: 10px 0;
       &.lightBorder {
         border: 1px solid $black;
       }
+      .checkIcon {
+        cursor: pointer;
+      }
       .listName {
         width: 100%;
+        &.unVisible {
+          text-decoration: line-through;
+          cursor: pointer;
+        }
       }
       .gridButton {
         display: flex;

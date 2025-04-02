@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 interface ITask {
   id: number;
   name: string;
+  isCompleted: boolean;
 }
 
 const TodoList = () => {
@@ -27,7 +28,10 @@ const TodoList = () => {
       setTasks(updateValue);
       setSelectedTask(null);
     } else {
-      setTasks([...tasks, { id: Math.random(), name: inputValue }]);
+      setTasks([
+        ...tasks,
+        { id: Math.random(), name: inputValue, isCompleted: false },
+      ]);
     }
     setInputValue("");
   };
@@ -41,6 +45,14 @@ const TodoList = () => {
     const newTodos = [...tasks];
     newTodos.splice(index, 1);
     setTasks(newTodos);
+  };
+
+  const handleChange = (value: number) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === value ? { ...task, isCompleted: !task.isCompleted } : task
+      )
+    );
   };
 
   return (
@@ -91,7 +103,19 @@ const TodoList = () => {
                     selectedTask?.id === res?.id ? styles.lightBorder : ""
                   }`}
                 >
-                  <div className={styles.listName}>{res.name}</div>
+                  <input
+                    type="checkbox"
+                    checked={res.isCompleted}
+                    onChange={() => handleChange(res.id)}
+                    className={styles.checkIcon}
+                  ></input>
+                  <div
+                    className={`${styles.listName} ${
+                      res.isCompleted ? styles.unVisible : ""
+                    } `}
+                  >
+                    {res.name}
+                  </div>
                   <div className={styles.gridButton}>
                     <EditOutlinedIcon onClick={() => handleUpdate(res)} />
                     <DeleteOutlinedIcon onClick={() => handleDelete(index)} />
