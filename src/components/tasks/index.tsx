@@ -11,11 +11,15 @@ export interface ITasks {
 const Tasks = () => {
   return (
     <div>
-      <div className={styles.tasksHeading}>React Training Tasks</div>
+      <div className={styles.tasksHeading}>{`React Training Tasks`}</div>
       <div className={styles.homeContent}>
         {tasks.map((res) => {
           return (
-            <Link to={`/task/${res?.id}`} className={styles.cardContent}>
+            <Link
+              key={res.id}
+              to={`/task/${res?.id}`}
+              className={styles.cardContent}
+            >
               <div className={styles.card}>
                 <div className={styles.cardHeading}>
                   <div>{res.id}</div>

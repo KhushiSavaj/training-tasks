@@ -5,21 +5,39 @@ import FormHandling from "../formHandling";
 import TodoList from "../todoList";
 import ArrowBackOutlinedIcon from "@mui/icons-material/ArrowBackOutlined";
 import styles from "./TaskDetails.module.scss";
+import { useEffect, useState } from "react";
+import { tasks } from "../../constant";
+import OrderSundae from "../orderSundae";
 
 const TaskDetails = () => {
+  const [currentTaskDetails, setCurrentTaskDetails] = useState<any>({});
   const params = useParams();
   const navigate = useNavigate();
+  const { id } = params;
+
+  const fetchTaskDetails = (id: string) => {
+    const findTaskDetails = tasks.find((ele) => ele.id === Number(id));
+    setCurrentTaskDetails(findTaskDetails);
+  };
+
+  useEffect(() => {
+    if (id) {
+      fetchTaskDetails(id);
+    }
+  });
 
   const renderComponent = () => {
     switch (Number(params.id)) {
       case 1:
-        return <Counter />;
+        return <Counter task={currentTaskDetails} />;
       case 2:
-        return <Greeting />;
+        return <Greeting task={currentTaskDetails} />;
       case 3:
-        return <FormHandling />;
+        return <FormHandling task={currentTaskDetails} />;
       case 4:
-        return <TodoList />;
+        return <TodoList task={currentTaskDetails} />;
+      case 5:
+        return <OrderSundae />;
       default:
         return <div>{params.id}</div>;
     }
@@ -29,7 +47,7 @@ const TaskDetails = () => {
     <div>
       <div onClick={() => navigate("/")} className={styles.backToTask}>
         <ArrowBackOutlinedIcon />
-        <div className={styles.backButton}>Back To Task</div>
+        <div className={styles.backButton}>{`Back To Task`}</div>
       </div>
       {renderComponent()}
     </div>

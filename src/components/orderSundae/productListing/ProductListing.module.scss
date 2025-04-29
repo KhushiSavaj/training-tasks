@@ -1,0 +1,184 @@
+@import "../../../styles/color.scss";
+
+.productListing {
+  margin: 50px 190px;
+  .sundaeHeading {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .productSection {
+    padding-top: 100px;
+    .productHeading {
+      font-size: 34px;
+      font-weight: 600;
+    }
+    .productTotal {
+      font-size: 24px;
+      font-weight: 500;
+      margin: 20px 0px 50px 0px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      .rupeesIcon {
+        display: flex;
+        align-items: center;
+        > svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+    .productSectionData {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 128px;
+      justify-content: center;
+      .product {
+        border: 2px solid $grey_100;
+        border-radius: 50px;
+        min-width: 250px;
+        max-width: 382px;
+        padding: 20px;
+        flex: 1 1 250px;
+        cursor: pointer;
+        &:hover {
+          background-color: #f4f0ec;
+        }
+        .productImage {
+          width: 100%;
+        }
+        .productName {
+          font-size: 24px;
+          font-weight: 600;
+        }
+        .productDetails {
+          padding: 20px 8px 10px 8px;
+          .productPriceQuantity {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 5px;
+            .productPrice {
+              font-size: 22px;
+              font-weight: 600;
+              display: flex;
+              align-items: center;
+              > svg {
+                height: 20px;
+                width: 20px;
+                fill: $black;
+              }
+            }
+            .productQuantity {
+              display: flex;
+              gap: 10px;
+              box-shadow: 1px 1px 2px 1px $grey;
+              border: 2px solid $grey_100;
+              > svg {
+                height: 35px;
+                width: 35px;
+                fill: $black;
+                border: 1px solid $grey_100;
+                border-radius: 4px;
+                padding: 10px;
+                cursor: pointer;
+              }
+              .quantity {
+                font-size: 20px;
+                font-weight: 500;
+              }
+            }
+          }
+          .productCheckName {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .checkIcon {
+              height: 20px;
+              width: 20px;
+              cursor: pointer;
+              accent-color: #f4f0ec;
+            }
+          }
+          .productPrice {
+            font-size: 22px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            > svg {
+              height: 22px;
+              width: 22px;
+              fill: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+  .grandTotal {
+    padding: 50px 0px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    > svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .orderSundaeButton {
+    text-align: center;
+    .error {
+      color: $error;
+      margin-bottom: 20px;
+    }
+    .sundaeButton {
+      padding: 26px 55px;
+      border-radius: 20px;
+      border: none;
+      background-color: #cda274;
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 2px 5px 15px 1px #1f202240;
+      }
+    }
+  }
+}
+
+// Media Query css
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .productListing {
+    margin: 40px 20px;
+    .productSection {
+      padding-top: 50px;
+      .productSectionData {
+        gap: 50px;
+      }
+      .productTotal {
+        font-size: 20px;
+      }
+    }
+    .grandTotal {
+      font-size: 30px;
+      > svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .productListing {
+    margin: 50px 50px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .productListing {
+    margin: 50px 300px;
+  }
+}

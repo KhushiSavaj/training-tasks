@@ -1,0 +1,73 @@
+@import "../../../styles/color.scss";
+
+.thankYouSection {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  .thankYouDetails {
+    padding: 100px;
+    background-color: #f4f0ec;
+    border-radius: 50px;
+    .thankYou {
+      font-size: 60px;
+      font-weight: 700;
+      text-align: center;
+    }
+    .orderNumber {
+      font-size: 36px;
+      font-weight: 500;
+      margin: 30px 0;
+      text-align: center;
+    }
+    .orderDescription {
+      font-size: 16px;
+      text-align: center;
+    }
+    .orderSundaeButton {
+      padding-top: 30px;
+      display: flex;
+      justify-content: center;
+      .thankYouButton {
+        padding: 19px 38px;
+        border-radius: 20px;
+        border: none;
+        background-color: #cda274;
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 2px 5px 15px 1px #1f202240;
+        }
+      }
+    }
+  }
+}
+
+// Media Query css
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .thankYouSection {
+    padding: 50px 20px;
+    .thankYouDetails {
+      padding: 50px 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .thankYouSection {
+    padding: 50px 0px;
+    .thankYouDetails {
+      padding: 60px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .thankYouSection {
+    padding-top: 100px;
+    .thankYouDetails {
+      padding: 142px 253px;
+    }
+  }
+}

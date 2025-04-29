@@ -9,20 +9,28 @@ interface ITask {
   isCompleted: boolean;
 }
 
-const TodoList = () => {
+const TodoList = (props: any) => {
+  const { task } = props;
   const [tasks, setTasks] = useState<ITask[]>([]);
   const [inputValue, setInputValue] = useState("");
   const [selectedTask, setSelectedTask] = useState<ITask | null>(null);
 
   const handleSubmit = () => {
     if (selectedTask) {
-      const updateValue = tasks.map((res) => {
-        if (selectedTask?.id === res?.id) {
-          return { ...res, name: inputValue };
-        }
-        return res;
-      });
-      setTasks(updateValue);
+      const clone = [...tasks];
+      const index = clone.findIndex((res) => res?.id === selectedTask?.id);
+      const objClone = { ...clone[index] };
+      objClone.name = inputValue;
+      clone[index] = objClone;
+      setTasks(clone);
+
+      // const updateValue = tasks.map((res) => {
+      //   if (selectedTask?.id === res?.id) {
+      //     return { ...res, name: inputValue };
+      //   }
+      //   return res;
+      // });
+      // setTasks(updateValue);
       setSelectedTask(null);
     } else {
       setTasks([
@@ -39,6 +47,9 @@ const TodoList = () => {
   };
 
   const handleDelete = (index: number) => {
+    // const filterTask = tasks.filter((_, i) => i !== index);
+    // setTasks(filterTask);
+
     const newTodos = [...tasks];
     newTodos.splice(index, 1);
     setTasks(newTodos);
@@ -55,10 +66,10 @@ const TodoList = () => {
   return (
     <div className={styles.container}>
       <div className={styles.taskDetails}>
-        <div className={styles.taskName}>{`4. Todo List`}</div>
-        <div className={styles.taskDescription}>
-          {`Build a simple todo list where users can add and remove tasks using state and list rendering.`}
+        <div className={styles.taskName}>
+          {task?.id}.{task?.title}
         </div>
+        <div className={styles.taskDescription}>{task.description}</div>
       </div>
       <div className={styles.taskSection}>
         <label className={styles.label}>{`Add a new task :`}</label>
