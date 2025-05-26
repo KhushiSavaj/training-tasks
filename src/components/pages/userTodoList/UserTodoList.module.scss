@@ -1,0 +1,127 @@
+@import "../../../styles/color.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  .userSection {
+    border: 1px solid $grey_100;
+    border-radius: 4px;
+    padding: 20px;
+    width: 730px;
+    height: 100%;
+    box-shadow: 2px 2px 10px 5px #0000001f;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .headerDetails {
+        display: flex;
+        gap: 2px;
+        .userIcon {
+          color: $grey_200;
+          width: 24px;
+          height: 24px;
+        }
+        .userFont {
+          font-size: 18px;
+          font-weight: 600;
+          margin-left: 10px;
+          color: $grey_200;
+        }
+      }
+      .plushIcon {
+        color: $blue_500;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .searchFiled {
+      width: 260px;
+      padding: 20px 0px 20px 0px;
+    }
+    .searchFiled input {
+      height: 26px;
+      padding: 8px 12px 8px 12px;
+    }
+    .vector {
+      display: flex;
+      gap: 2px;
+    }
+    .headContain {
+      font-size: 14px;
+      font-weight: 600;
+      color: $grey_200;
+    }
+    .genderChange {
+      cursor: pointer;
+      padding-left: 10px;
+    }
+    .genderImg {
+      cursor: pointer;
+    }
+    .dataFiled input {
+      padding: 8px 12px 8px 8px;
+    }
+    .genderIcon {
+      display: flex;
+      position: absolute;
+      right: 110px;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      .iconButton {
+        color: $blue_500;
+        margin: 8px;
+      }
+    }
+    .gender {
+      color: $grey_10;
+      width: 20px;
+      height: 20px;
+    }
+    .noData {
+      align-items: center;
+      color: $grey_10;
+    }
+    .deleteHover {
+      cursor: pointer;
+      &:hover {
+        background-color: $blue_50;
+      }
+      .userData {
+        color: $grey_10;
+        cursor: pointer;
+        padding-right: 8px;
+      }
+      .deleteIcon {
+        color: $error;
+        cursor: pointer;
+      }
+      .gender {
+        color: $grey_10;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .errorBorder {
+      border: 1px solid #f78ca2 !important;
+      border-radius: 4px;
+    }
+    .noDataSection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 30vh;
+      position: absolute;
+    }
+    .noDataContain {
+      color: $grey_10;
+      font-size: 20px;
+    }
+  }
+}
+
+.gender {
+  color: $grey_10;
+}

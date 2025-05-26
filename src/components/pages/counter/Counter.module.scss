@@ -1,0 +1,55 @@
+@import "../../../styles/color.scss";
+
+.counterContent {
+  margin: 0px 50px;
+  padding: 20px;
+  max-width: 700;
+  min-width: 300;
+  border: 1px solid $grey;
+  border-radius: 10px;
+  padding: 30px;
+  .counterHead {
+    margin-bottom: 50px;
+    .counterHeading {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .counterDescription {
+      color: $grey;
+    }
+  }
+  .counterSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    .count {
+      font-size: 40px;
+      font-weight: 700;
+    }
+    .currentCount {
+      color: $grey;
+    }
+    .countButton {
+      display: flex;
+      align-items: center;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      > svg {
+        height: 40px;
+        width: 40px;
+        fill: $black;
+        border: 1px solid $grey_100;
+        border-radius: 4px;
+        padding: 10px;
+        cursor: pointer;
+      }
+      .disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Tasks from "./components/tasks";
-import TaskDetails from "./components/taskDetails";
+import Tasks from "./components/pages/tasks";
+import TaskDetails from "./components/pages/taskDetails";
 
 const App = () => {
   return (

@@ -1,0 +1,106 @@
+@import "../../../../styles/color.scss";
+
+.orderSummary {
+  padding: 30px 60px;
+  .backPage {
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    > svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .summaryHeading {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .orderSummarySection {
+    padding-top: 30px;
+    .orderName {
+      font-size: 32px;
+      font-weight: 600;
+      display: flex;
+      gap: 5px;
+      .rupeesIcon {
+        display: flex;
+        align-items: center;
+        > svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+    .orderItems {
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: 500;
+      li {
+        margin-top: 10px;
+        span {
+          margin: 5px;
+        }
+      }
+      li::marker {
+        color: #cda274;
+      }
+    }
+  }
+  .totalItems {
+    padding-top: 30px;
+    font-size: 34px;
+    font-weight: 600;
+    > svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  .checkTerms {
+    padding-top: 30px;
+    display: flex;
+    gap: 10px;
+    .checkbox {
+      height: 22px;
+      width: 22px;
+      cursor: pointer;
+    }
+  }
+  .error {
+    color: $error;
+    font-size: 12px;
+  }
+  .orderSundaeButton {
+    padding-top: 30px;
+    .confirmOrder {
+      padding: 26px 37px;
+      border-radius: 20px;
+      border: none;
+      background-color: #cda274;
+      color: $white;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 2px 5px 15px 1px #1f202240;
+      }
+    }
+  }
+}
+
+// Media Query css
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .orderSummary {
+    padding: 30px 30px;
+    .summaryHeading {
+      font-size: 37px;
+    }
+    .orderSummarySection {
+      .orderName {
+        font-size: 30px;
+      }
+      .orderItems {
+        font-size: 22px;
+      }
+    }
+  }
+}

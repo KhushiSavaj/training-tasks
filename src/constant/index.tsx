@@ -1,4 +1,4 @@
-import { ITasks } from "../components/tasks";
+import { ITasks } from "../components/pages/tasks";
 import { IOrder } from "../context/orderSundae";
 
 export const tasks: ITasks[] = [
@@ -28,9 +28,15 @@ export const tasks: ITasks[] = [
   },
   {
     id: 5,
-    title: "E commerce",
+    title: "E-commerce",
     description:
       "Build a simple todo list where users can add and remove tasks using state and list rendering.",
+  },
+  {
+    id: 6,
+    title: "User TodoList",
+    description:
+      "User Details using material UI component with use useReducer() hook for state management.",
   },
 ];
 
