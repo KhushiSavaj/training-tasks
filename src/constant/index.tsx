@@ -38,6 +38,11 @@ export const tasks: ITasks[] = [
     description:
       "User Details using material UI component with use useReducer() hook for state management.",
   },
+  {
+    id: 7,
+    title: "Task TodoList",
+    description: "Task TodoList using material UI component with Redux.",
+  },
 ];
 
 export const scoops: IOrder[] = [

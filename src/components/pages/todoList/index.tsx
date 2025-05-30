@@ -67,7 +67,9 @@ const TodoList = (props: any) => {
     <div className={styles.container}>
       <div className={styles.taskDetails}>
         <div className={styles.taskName}>
-          {task?.id}.{task?.title}
+          {task?.id}
+          {`.`}
+          {task?.title}
         </div>
         <div className={styles.taskDescription}>{task.description}</div>
       </div>

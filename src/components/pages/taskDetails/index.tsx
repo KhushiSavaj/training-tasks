@@ -9,6 +9,7 @@ import FormHandling from "../formHandling";
 import TodoList from "../todoList";
 import OrderSundae from "../orderSundae";
 import UserTodoList from "../userTodoList";
+import TaskTodoList from "../taskTodoList";
 
 const TaskDetails = () => {
   const [currentTaskDetails, setCurrentTaskDetails] = useState<any>({});
@@ -41,6 +42,8 @@ const TaskDetails = () => {
         return <OrderSundae />;
       case 6:
         return <UserTodoList />;
+      case 7:
+        return <TaskTodoList task={currentTaskDetails} />;
       default:
         return <div>{params.id}</div>;
     }
